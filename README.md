@@ -58,7 +58,7 @@ The website is the "First Impression" of the OpenMacaw movement. We welcome PRs 
 - Optimize asset loading/LCP.
 - Enhance animations or accessibility.
 
-*Note: For the actual OpenMacaw application code, visit the [Main Repository](https://github.com/OpenMacaw/OpenMacaw).*
+*Note: For the actual OpenMacaw application code, visit the [Main Repository](https://github.com/silentoplayz/OpenMacaw).*
 
 ---
 © 2026 OpenMacaw. Built for the Mac. 🦜

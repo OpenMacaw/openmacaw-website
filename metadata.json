@@ -1,0 +1,5 @@
+{
+  "name": "OpenMacaw",
+  "description": "The macOS-native, Apple Silicon optimized fork of OpenClaw.",
+  "requestFramePermissions": []
+}

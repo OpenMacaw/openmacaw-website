@@ -1,87 +1,51 @@
 import React from 'react';
-import { motion } from 'motion/react';
-import { Box, Cpu } from 'lucide-react';
+import { motion, useScroll, useTransform } from 'motion/react';
+import { EyeOff, Eye } from 'lucide-react';
 
 export function WhySection() {
+  const { scrollYProgress } = useScroll();
+  const opacity = useTransform(scrollYProgress, [0.1, 0.3], [0, 1]);
+  const y = useTransform(scrollYProgress, [0.1, 0.3], [100, 0]);
+
   return (
-    <section className="max-w-5xl mx-auto mb-40 px-6">
-      <div className="text-center mb-16">
-        <h2 className="text-3xl sm:text-5xl font-bold tracking-tight mb-6 bg-gradient-to-b from-white to-zinc-500 bg-clip-text text-transparent">
-          A Paradigm Shift in Automation
-        </h2>
-        <p className="text-zinc-400 text-lg sm:text-xl max-w-2xl mx-auto font-light">
-          We rebuilt the agent framework from the ground up for Apple Silicon. 
-          No heavy containers, no web wrappers.
-        </p>
-      </div>
+    <section className="py-24 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-zinc-950 to-black z-0 pointer-events-none"></div>
+      
+      <motion.div 
+        style={{ opacity, y }}
+        className="max-w-6xl mx-auto px-6 relative z-10"
+      >
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">The evolution of automation.</h2>
+          <p className="text-zinc-400 max-w-2xl mx-auto text-lg">Stop praying your agent gets it right. Start approving what it actually does.</p>
+        </div>
 
-      <div className="grid md:grid-cols-2 gap-8 items-stretch">
-        {/* The Old Way */}
-        <motion.div 
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-          className="p-8 rounded-3xl bg-zinc-950 border border-zinc-800 relative overflow-hidden group"
-        >
-          <div className="absolute top-0 right-0 w-32 h-32 bg-red-500/5 rounded-full blur-2xl"></div>
-          <div className="mb-8 p-3 rounded-2xl bg-zinc-900 border border-zinc-800 inline-block">
-            <Box className="w-6 h-6 text-zinc-500" />
+        <div className="grid md:grid-cols-2 gap-8">
+          {/* Default Agents */}
+          <div className="bg-zinc-900/40 border border-red-500/20 rounded-3xl p-8 backdrop-blur-md relative overflow-hidden group">
+            <div className="absolute inset-0 bg-red-500/5 group-hover:bg-red-500/10 transition-colors"></div>
+            <EyeOff className="w-8 h-8 text-red-400 mb-6" />
+            <h3 className="text-xl font-semibold text-zinc-200 mb-3">The "Black-Box" Way</h3>
+            <ul className="space-y-4 text-zinc-400 text-sm">
+              <li className="flex items-start gap-3"><span className="text-red-500 mt-1">✕</span> Executes actions autonomously without your knowledge.</li>
+              <li className="flex items-start gap-3"><span className="text-red-500 mt-1">✕</span> Hallucinates non-existent UI elements.</li>
+              <li className="flex items-start gap-3"><span className="text-red-500 mt-1">✕</span> Wastes tokens in infinite retry loops.</li>
+            </ul>
           </div>
-          <h3 className="text-2xl font-semibold mb-4 text-zinc-300">The Old Way</h3>
-          <ul className="space-y-4 text-zinc-500">
-            <li className="flex items-start gap-3">
-              <span className="text-red-500/50 mt-1">✗</span>
-              <span>Electron wrappers chewing through RAM</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="text-red-500/50 mt-1">✗</span>
-              <span>Docker containers required for basic tasks</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="text-red-500/50 mt-1">✗</span>
-              <span>Slow, generic UI components</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="text-red-500/50 mt-1">✗</span>
-              <span>Cloud APIs for vision and interaction</span>
-            </li>
-          </ul>
-        </motion.div>
 
-        {/* The Macaw Way */}
-        <motion.div 
-          initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="p-8 rounded-3xl bg-zinc-900/40 border border-white/10 backdrop-blur-xl relative overflow-hidden shadow-2xl shadow-indigo-500/5"
-        >
-          <div className="absolute top-0 right-0 w-48 h-48 bg-indigo-500/10 rounded-full blur-3xl group-hover:bg-indigo-500/20 transition-colors duration-700"></div>
-          <div className="mb-8 p-3 rounded-2xl bg-white/10 border border-white/10 inline-block shadow-inner">
-            <Cpu className="w-6 h-6 text-indigo-400" />
+          {/* The Macaw Way */}
+          <div className="bg-white/5 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-md relative overflow-hidden group shadow-[0_0_30px_-5px_rgba(6,182,212,0.15)]">
+            <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 group-hover:opacity-100 transition-opacity"></div>
+            <Eye className="w-8 h-8 text-cyan-400 mb-6" />
+            <h3 className="text-xl font-semibold text-white mb-3">The Human-in-the-Loop Way</h3>
+            <ul className="space-y-4 text-zinc-300 text-sm font-medium">
+              <li className="flex items-start gap-3"><span className="text-cyan-400 mt-1">✓</span> Reviews the full execution plan before a single click happens.</li>
+              <li className="flex items-start gap-3"><span className="text-cyan-400 mt-1">✓</span> Halts immediately if the UI changes unexpectedly.</li>
+              <li className="flex items-start gap-3"><span className="text-cyan-400 mt-1">✓</span> Intervene, edit, or cancel plans at any point.</li>
+            </ul>
           </div>
-          <h3 className="text-2xl font-semibold mb-4 text-white">The Macaw Way</h3>
-          <ul className="space-y-4 text-zinc-300">
-            <li className="flex items-start gap-3">
-              <span className="text-indigo-400 mt-1">✓</span>
-              <span>SwiftUI native interface (Zero Electron)</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="text-indigo-400 mt-1">✓</span>
-              <span>Runs as a lightweight macOS daemon</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="text-indigo-400 mt-1">✓</span>
-              <span>Apple Accessibility hooks for instantaneous interaction</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="text-indigo-400 mt-1">✓</span>
-              <span>Local MLX inference—your data never leaves the device</span>
-            </li>
-          </ul>
-        </motion.div>
-      </div>
+        </div>
+      </motion.div>
     </section>
   );
 }

@@ -8,10 +8,10 @@ import { FeatureBento } from './components/FeatureBento';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-black text-zinc-50 selection:bg-zinc-800 selection:text-white overflow-hidden font-sans">
+    <div className="min-h-screen bg-black text-zinc-50 selection:bg-cyan-500/30 selection:text-white overflow-hidden font-sans">
       {/* Background Glow */}
       <div className="fixed inset-0 z-0 pointer-events-none flex justify-center items-start">
-        <div className="w-[800px] h-[600px] bg-indigo-500/20 rounded-full blur-[120px] opacity-40 translate-y-[-40%]"></div>
+        <div className="w-[800px] h-[600px] bg-cyan-500/20 rounded-full blur-[120px] opacity-40 translate-y-[-40%]"></div>
       </div>
 
       {/* Navigation */}
@@ -49,7 +49,7 @@ export default function App() {
             <span className="font-medium">© 2026 OpenMacaw</span>
           </div>
           <p className="text-sm text-zinc-600 text-center md:text-left font-light">
-            An open-source project. Not affiliated with Apple Inc.
+            Built for precision. Designed for safety.
           </p>
           <div className="flex items-center gap-6 text-sm text-zinc-500">
             <a href="https://github.com/openmacaw/openmacaw" className="hover:text-white transition-colors">GitHub</a>

@@ -2,7 +2,7 @@
 
 **The high-performance source code for [openmacaw.com](https://openmacaw.com).**
 
-This repository contains the React/Vite source code for the OpenMacaw landing page. It is designed to be a high-conversion, "Apple-esque" showcase of the OpenMacaw mission, utilizing 2026 design trends like modular Bento Grids and scroll-triggered storytelling.
+This repository contains the React/Vite source code for the OpenMacaw landing page. It is designed to be a high-conversion showcase of the OpenMacaw "Guardian Agent" mission, emphasizing precision, safety, and a Human-in-the-Loop architecture.
 
 ## 🛠️ Tech Stack
 
@@ -15,9 +15,10 @@ This repository contains the React/Vite source code for the OpenMacaw landing pa
 - **Deployment:** [Vercel](https://vercel.com/)
 
 ## 🎨 Design Philosophy
-- **Glassmorphism 2.0:** Deep background blurs (`backdrop-blur-xl`) and high-contrast translucent borders.
-- **Bento Architecture:** Information density managed via responsive, grid-based layouts.
-- **Motion Storytelling:** Subtle, scroll-linked reveals to keep the user engaged with the "Macaw" narrative.
+- **Security-First Aesthetic:** High-contrast Electric Cyan accents (`cyan-500`), deep blacks, and a premium, precision-tool feel.
+- **Human-in-the-Loop:** The UI emphasizes that the agent plans the workflow (Planner-Executor model) but the user holds the final authority.
+- **Ghost UI 2.0:** Interactive Approval Checklist mockups to highlight the safe, auditable execution process.
+- **Glassmorphism 2.0:** Deep background blurs (`backdrop-blur-xl`) and high-contrast translucent borders (`border-white/10`).
 
 ## 🚀 Local Development
 
@@ -61,4 +62,4 @@ The website is the "First Impression" of the OpenMacaw movement. We welcome PRs 
 *Note: For the actual OpenMacaw application code, visit the [Main Repository](https://github.com/silentoplayz/OpenMacaw).*
 
 ---
-© 2026 OpenMacaw. Built for the Mac. 🦜
+© 2026 OpenMacaw. Built for precision. Designed for safety. 🛡️

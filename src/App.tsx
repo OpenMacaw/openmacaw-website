@@ -1,5 +1,5 @@
 import React from 'react';
-import { Command, Github, Twitter } from 'lucide-react';
+import { Github, Twitter } from 'lucide-react';
 
 import { HeroWaitlist } from './components/HeroWaitlist';
 import { DeveloperTrustBar } from './components/DeveloperTrustBar';
@@ -18,7 +18,7 @@ export default function App() {
       <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-black/60 backdrop-blur-xl">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2 font-semibold tracking-tight text-lg">
-            <Command className="w-5 h-5 text-white" />
+            <span className="text-xl">🦜</span>
             <span className="text-white">OpenMacaw</span>
           </div>
           <div className="flex items-center gap-6 text-sm font-medium text-zinc-400">
@@ -45,7 +45,7 @@ export default function App() {
       <footer className="border-t border-white/5 bg-black relative z-10">
         <div className="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-2 text-zinc-400">
-            <Command className="w-5 h-5" />
+            <span className="text-xl">🦜</span>
             <span className="font-medium">© 2026 OpenMacaw</span>
           </div>
           <p className="text-sm text-zinc-600 text-center md:text-left font-light">

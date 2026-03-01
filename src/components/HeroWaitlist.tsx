@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Sparkles, Terminal, ChevronRight, Shield, Command, CheckSquare, Square, ThumbsUp } from 'lucide-react';
+import { Sparkles, Terminal, ChevronRight, Shield, CheckSquare, Square, ThumbsUp } from 'lucide-react';
 
 export function HeroWaitlist() {
   return (
@@ -68,7 +68,7 @@ export function HeroWaitlist() {
             {/* Title Bar */}
             <div className="h-12 bg-white/[0.02] border-b border-white/5 flex items-center px-4 gap-4 relative shrink-0 rounded-t-[2rem]">
               <div className="flex items-center gap-2 text-zinc-400">
-                <Command className="w-4 h-4 text-cyan-400" />
+                <span className="text-sm">🦜</span>
                 <span className="text-sm font-semibold tracking-wide">MACAW // EXECUTION PLANNER</span>
               </div>
             </div>
